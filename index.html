@@ -1,0 +1,130 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>This is me | 24k Gold Aloy Conversion</title>
+<meta name="description" content="">
+<link rel="icon" href="favicon.ico" sizes="any">
+<meta name="theme-color" content="#423c23">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="app.js" defer></script>
+<link rel="manifest" href="manifest.json">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="apple-touch-icon" href="app-icon192.png">
+<style type="text/css">
+	* { margin: 0; padding: 0; box-sizing: border-box;}
+	html,body { height: 100%; font-family: "Poppins", sans-serif; font-weight: 400;}      
+	body { display: flex; justify-content: center; align-items: center; background-color: #f4f4f9; height: 100vh; padding: 20px; flex-wrap: wrap; font-size: 16px;}
+	.container {display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;}
+	.signin-box { max-width: 600px; width: 100%;}
+	.signin-box-inner { background-color: white; padding: 15px 30px 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);}
+	h2 { margin-bottom: 20px; font-weight: 600; font-size: 1.5rem}
+	.signin-box-inner h2 { font-weight: 500; font-size: 1.25rem;}
+	.inp-data{ display: flex; column-gap: 15px;}
+	.inp-data .inp-in{ width: 50%; }
+	.inp-in input[type="number"]{width: 100%;}
+	.inner {display: flex; flex-direction: column;}
+	.inp-lbl{ margin-bottom: 10px; }
+	.inp-lbl > label{ width: 100%; display: block;}
+	.inp-lbl .inp-in{ display: inline-block; padding: 5px 0;}
+	.othtxt{ display: inline-block; width: calc(100% - 281px);}
+	.othtxt input[type="number"]{ width: 100%; padding: 5px 10px; margin-bottom: 0; transition: all 0.2s ease 0s;}
+	.othtxt input[type="number"]:disabled{ opacity: 0.5; }
+	.inp-lbl .inp-in label{ position: relative; z-index: 1; padding: 5px 15px; margin:0 10px 0 0; cursor: pointer;}
+	.inp-lbl .inp-in label:before{ position: absolute; top: 0; left: 0; width: calc(100% - 4px); height:calc(100% - 4px); content: ""; background: #ffd700; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border:2px dashed rgba(0,0,0,0); z-index: -1}
+	.inp-lbl .inp-in:nth-child(3) label:before{ background-color:#ffce61 ; }
+	.inp-lbl .inp-in:nth-child(4) label:before{ background-color:#ccc ; }
+	.inp-lbl .inp-in input[type="radio"]{ display: none; }
+	.inp-lbl .inp-in input[type="radio"]:checked + label:before{ border-color: #000; }
+	
+
+
+
+	label { margin-bottom: 5px; font-weight: 500;}
+	sup{ color: red; display: contents; font-size: 15px;}
+	label > span{ font-size: 10px; color: #aaa; font-weight: 500;}
+	input[type="number"],input[type="password"] { padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 5px; outline: none; font-family: "Poppins", sans-serif; font-size: 15px; color: #3e3e3e;}
+	.result { font-size: 1.2rem; margin-bottom: 10px;}
+	.result.error{ color: #f00; font-weight: 500;}	
+	button { padding: 12px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; font-weight: 500; transition: all 0.3s ease 0s;}
+	button:hover { background-color: #45a049;}
+	.footer {text-align: center; background-color: #f4f4f9; padding: 10px 0; font-size: 14px; color: #888; width: 100%; position: absolute; bottom: 0; }
+	footer p { margin: 0;}
+	@media only screen and (max-width: 560px) {		
+		h2 {font-size: 1.2rem }
+		.signin-box-inner h2 {font-size: 1.1rem; margin-bottom: 10px;}
+		.inp-data{display: block;}
+		.inp-data .inp-in{ width: auto; }
+		.result{ font-size: 1.1rem; }
+	}
+
+	@media only screen and (max-width: 480px) {      	
+		.othtxt{ width: 100%; margin:10px 0 0 0;}
+		.inp-lbl .inp-in label{ font-size: 14px; }
+	}	
+
+	@media only screen and (max-height: 590px) {
+		body{ padding-bottom:0; height: auto; overflow: auto;}
+		.footer{ position: relative; margin-top: 10px;}
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+	  	<div class="signin-box">
+			<h2>Gold Alloy Conversion by Sabyasachi</h2>
+			<div class="signin-box-inner">
+			  	<h2>Get Proper Gold Alloy Measurement</h2>
+				<div class="inner">
+				  	<div class="inp-data">
+				  		<div class="inp-in">
+				      		<label for="weight">Enter Gold Weight In Gram<sup>*</sup></label>
+				    		<input type="number" id="weight" placeholder="Example 5.02" required>
+				      	</div>
+				      	<div class="inp-in">
+				      		<label for="purity">Set Gold Purity In % <sup>*</sup> <span id="purity_by_karat">&nbsp;</span></label>
+				      		<input type="number" id="purity" placeholder="Example 98.6" required>
+				  		</div>
+				  	</div>	    
+				  	<div class="inp-lbl">
+				      	<label for="karat">Select Gold Karat <sup>*</sup> <span id="karat_by_purity">&nbsp;</span></label>
+				      	<div class="inp-in">		      		
+				        	<input type="radio" id="22k" name="gold_karat" value="0.9167">
+				        	<label for="22k">22K</label>
+				      	</div>
+				        <div class="inp-in">			        
+					        <input type="radio" id="18k" name="gold_karat" value="0.750">
+					        <label for="18k">18K</label>
+				        </div>
+				        <div class="inp-in">			        
+					        <input type="radio" id="otherK" name="gold_karat" value="">
+					        <label for="otherK">Other Karat</label>
+				        </div>
+				        <div class="othtxt">
+				        	<input type="number" name="" placeholder="Example 14" id="ontherKinp">
+				        </div>
+				  	</div>
+					<p class="result" id="result">Result</p>
+					<button id="calculate">Calculate Alloy</button> 
+				</div>
+			</div>
+	  </div>
+	</div>
+	<footer class="footer">
+		<p>&copy; Durga Jewellers | All Rights Reserved</p>
+	</footer>
+	<script type="text/javascript">
+
+		window.addEventListener('load', () => {
+			if ('serviceWorker' in navigator) {
+				navigator.serviceWorker.register('/serviceworker.js')
+				.then(() => console.log('Service Worker registered'))
+				.catch(e => console.error('SW registration failed:', e));
+			}
+		});
+
+	</script>
+</body>
+</html>

@@ -119,7 +119,7 @@
 
 		window.addEventListener('load', () => {
 			if ('serviceWorker' in navigator) {
-				navigator.serviceWorker.register('/serviceworker.js')
+				navigator.serviceWorker.register('./serviceworker.js')
 				.then(() => console.log('Service Worker registered'))
 				.catch(e => console.error('SW registration failed:', e));
 			}
@@ -127,4 +127,5 @@
 
 	</script>
 </body>
+
 </html>

@@ -2,8 +2,8 @@
   "name": "Accurate Gold Alloy Conversion by Sabyasachi",
   "short_name": "Gold Alloy Converter",
   "description": "A web app for accurate gold alloy conversion",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/gsuperalloy/",
+  "scope": "/gsuperalloy/",
   "display": "standalone",
   "orientation": "portrait",
   "dir": "auto",
@@ -30,3 +30,4 @@
     }
   ]
 }
+

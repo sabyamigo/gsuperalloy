@@ -1,14 +1,14 @@
 const CACHE_NAME = "gold-calc-pwa-v1";
 const ASSETS_TO_CACHE = [
-  "/",
-  "/index.html",
-  "/offline.html",
-  "/serviceworker.js",
-  "/favicon.ico",
-  "app-icon192.png",
-  "app-icon512.png",
-  "icon512_rounded.png",
-  "icon512_maskable.png" // maskable icon for adaptive display
+  "./",
+  "./index.html",
+  "./offline.html",
+  "./serviceworker.js",
+  "./favicon.ico",
+  "./app-icon192.png",
+  "./app-icon512.png",
+  "./icon512_rounded.png",
+  "./icon512_maskable.png" // maskable icon for adaptive display
 ];
 
 // Install SW and cache all assets
@@ -58,7 +58,7 @@ self.addEventListener("fetch", event => {
         .catch(() => {
           // Fallback to offline page for navigation requests
           if (event.request.mode === "navigate") {
-            return caches.match("/offline.html");
+            return caches.match("./offline.html");
           }
         });
     })

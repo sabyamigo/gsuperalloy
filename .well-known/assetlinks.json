@@ -1,0 +1,8 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "io.github.sabyamigo.twa",
+    "sha256_cert_fingerprints": ["F9:6B:FE:6F:E3:96:53:26:F9:03:0D:D1:D7:C9:0E:50:7F:D2:84:40:E3:8D:E6:17:B7:B8:62:3D:AC:52:81:61"]
+  }
+}]
